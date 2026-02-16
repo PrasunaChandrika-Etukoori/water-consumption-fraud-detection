@@ -1,151 +1,108 @@
+# 🚰 Water Consumption Fraud Detection
 
-**Overview**
+Machine learning–based system to identify **fraudulent water consumption behavior** using historical usage data.
 
-Water supply companies face significant revenue loss due to fraudulent water consumption, where customers tamper with water meters to reduce billing amounts.
-This project uses data mining and machine learning techniques to detect fraudulent water consumption behavior by analyzing historical consumption patterns.
+---
 
-The system classifies customers into Fraud and Non-Fraud categories using supervised learning models.
+## 🌍 Why this project?
+Water supply companies lose significant revenue due to **non-technical losses**, where customers manipulate water meters to reduce billing amounts.  
+Traditional manual inspection is **slow, expensive, and error-prone**.
 
+This project automates fraud detection by applying **data mining and machine learning techniques** to customer water consumption patterns.
 
-**Problem Statement**
+---
 
-There are two major types of water loss:
+## 🎯 What does it do?
+- Analyzes historical water usage data  
+- Detects abnormal or fraudulent consumption behavior  
+- Classifies customers as **Fraud** or **Non-Fraud**  
+- Compares machine learning models to find the most effective one  
 
-Technical Loss (TL): Leakage, transmission issues, system faults
+---
 
-Non-Technical Loss (NTL): Fraudulent consumption where delivered water is not billed
+## 🧠 Approach
+1. Collect and preprocess water consumption data  
+2. Train supervised learning models  
+3. Evaluate models using accuracy and recall metrics  
+4. Use the best-performing model to predict fraud on new data  
 
-Manual inspection of water meters is time-consuming, costly, and error-prone.
-This project automates fraud detection using machine learning classification models.
+---
 
+## 📊 Dataset
+- **Source:** Kaggle (Water Consumption Dataset)
+- **Features:** Water usage values
+- **Labels:**
+  - `YES` → Fraud  
+  - `NO` → Non-Fraud  
 
+**Dataset Size**
+- Total records: **8002**
+- Training data: **6401**
+- Testing data: **1601**
 
-**Objectives**
+---
 
-Detect fraudulent water consumption behavior
+## 🔧 Data Preprocessing
+- Convert categorical labels (`YES` / `NO`) to numeric values  
+- Handle missing values  
+- Normalize features using **Min-Max Scaling**  
+- Split data into **70% training** and **30% testing**  
 
-Reduce non-technical losses
+---
 
-Assist water supply companies in fraud identification
+## 🤖 Machine Learning Models
+- **Support Vector Machine (SVM)**
+- **K-Nearest Neighbors (KNN)**
 
-Compare performance of different ML algorithms
+---
 
+## 📈 Model Performance
 
+| Algorithm | Accuracy |
+|----------|----------|
+| SVM | ~90% |
+| KNN | ~72% |
 
-**Proposed Solution**
+✅ **SVM outperformed KNN**, making it more suitable for fraud detection in this use case.
 
-The project uses Support Vector Machine (SVM) and K-Nearest Neighbors (KNN) algorithms to classify customers based on their water consumption patterns.
+---
 
-The models are trained on historical consumption data and evaluated using accuracy and recall metrics.
-The better-performing model is then used to predict fraud on new, unseen test data.
+## 🖥️ Application Features
+- Upload water consumption dataset  
+- Automatic data preprocessing  
+- Train and evaluate SVM and KNN models  
+- Visualize accuracy comparison  
+- Predict fraud for new test data  
 
+The application is built using a **Python Tkinter GUI** for ease of use.
 
+---
 
-**Dataset**
+## ▶️ How to Run
 
-Source: Kaggle (water consumption dataset)
+### Option 1: Windows (Recommended)
+1. Double-click `run.bat`
+2. Upload the training dataset
+3. Click **Preprocess Dataset**
+4. Run **SVM** or **KNN**
+5. Upload test dataset to predict fraud
 
-Features: Water usage values
+---
 
-**Labels:**
+## 🛠️ Tech Stack
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-learn  
+- Tkinter (GUI)  
+- Anaconda Environment  
 
-YES → Fraud
+---
 
-NO → Non-Fraud
+## ✅ Conclusion
+This project demonstrates how **machine learning models** can effectively detect fraudulent water consumption behavior.  
+Among the tested models, **SVM achieved higher accuracy**, making it the preferred choice for this application.
 
-**Dataset size:**
+---
 
-Total records: 8002
-
-Training set: 6401
-
-Testing set: 1601
-
-
-
-**Data Preprocessing**
-
-The following preprocessing steps are applied:
-
-Convert categorical labels (YES / NO) into numeric values
-
-Handle missing values
-
-Normalize features using Min-Max Scaling
-
-Split data into training (70%) and testing (30%)
-
-
-
-**Algorithms Used**
-
-Support Vector Machine (SVM)
-
-K-Nearest Neighbors (KNN)
-
-
-
-**Model Performance**
-
-Algorithm	Accuracy
-SVM	         ~90%
-KNN	         ~72%
-
-SVM performs better than KNN for this dataset.
-
-
-
-**Application Features**
-
-Upload training dataset
-
-Preprocess dataset automatically
-
-Train SVM and KNN models
-
-Visualize accuracy comparison
-
-Upload test dataset
-
-Predict whether water consumption is Fraud or Non-Fraud
-
-The application is built using Python Tkinter GUI.
-
-
-
-**How to Run the Project**
-
-Option 1: Using Batch File (Windows)
-
-Double-click run.bat
-
-Upload the training dataset
-
-Click Preprocess Dataset
-
-Run SVM or KNN
-
-Upload test dataset to predict fraud
-
-
-
-**Tech Stack**
-
-Python
-
-Pandas
-
-NumPy
-
-Scikit-learn
-
-Tkinter (GUI)
-
-Anaconda Environment
-
-
-**Conclusion**
-This project demonstrates how machine learning models can effectively identify fraudulent behavior in
-water consumption.
-Among the tested models, SVM achieved higher accuracy, making it more suitable for fraud detection in
-this use case.
+📌 *Academic project (2021)
